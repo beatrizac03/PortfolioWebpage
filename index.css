@@ -1,0 +1,363 @@
+:root{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    width: 100vw;
+    background-color: #BE3144;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    position: fixed;
+    top: 0;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    margin-right: 4rem;
+}
+
+ul li {
+    list-style: none;
+
+    
+}
+
+ul li:hover{
+    background-color: #45567D;
+}
+
+ul li a{
+   font-size: 2.2rem;
+   display: block;
+   padding: 2rem;
+}
+
+li a, a:visited, #work a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* ------------------ */
+
+#welcome-section{
+   
+    height: 100vh;
+    background-image: linear-gradient(
+        220deg,
+        black,
+        gray 190%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    font-size: 5.5rem;
+    font-weight: 500;
+}
+
+p{
+    font-size: 3rem;
+    font-style: italic;
+    color: #BE3144;
+    font-weight: lighter;
+}
+
+/* ------------------ */
+
+#projects{
+    
+    padding: 10rem 2rem;
+    background-color: #45567D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#projects h2{
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 500;
+    border-bottom: 0.2rem solid white;
+    max-height: 6rem;
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+}
+
+#work{
+    
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 6rem;
+}
+
+div img{
+    width: 40rem;
+    height: 38rem;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+div p{
+    font-size: 2rem;
+    text-align: center;
+    color: #F0F0F0;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 1.3rem;
+}
+
+button{
+    width: 15rem;
+    font-size: 2.2rem;
+    height: 5rem;
+    color: white;
+    background-color: #303841;
+    border: none;
+    align-self: center;
+    border-radius: 0.2rem;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+button:hover{
+    background-color: #BE3144;
+    transition: background 0.3s ease-out;
+    cursor: pointer;  
+}
+
+button:hover .signal {
+     /* Ajuste o valor de '30px' para definir o quanto o elemento .signal deve se mover */
+    margin-left: 3px;
+  }
+
+.project-tile{
+    background-color: #303841;
+    height: 45rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.code{
+    opacity: 0%;
+}
+
+.project-tile:hover .code {
+    opacity: 100%;
+    color: coral;
+    transition: 0.5s ease-out;
+}
+
+.label{
+   position: relative;
+   right: 0.6rem;
+}
+
+.signal{
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 0.5rem;
+    transition: margin-left 0.3s ease;
+}
+
+/* ------------------ */
+
+#contact{
+   display: flex;
+    height: 80vh;
+    background-color: #303841;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.invitation h2{
+    border-bottom: none;
+    margin-bottom: 0;
+    font-size: 5.8rem;
+    color: #F0F0F0;
+}
+
+.invitation p{
+    margin-top: 2.5rem;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1.8rem;
+}
+
+.contact-links{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    
+}
+
+.contact-details{
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+    padding-right: 4rem;
+}
+
+.contact-details:hover{
+    transform: translateY(8px);
+}
+
+.contact-links a{
+    color: #F0F0F0;
+    text-decoration: none;
+}
+
+.contact-links i{
+    padding: 0.5rem;
+}
+
+
+/* ------------------ */
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #303841;
+    border-top: 4px solid #BE3144;
+}
+
+footer p{
+    color: #F0F0F0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 1.8rem;
+    padding: 4rem;
+    font-weight: 300;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+@media (min-width: 500px) and (max-width: 603px)  {
+    footer p{
+        font-size: 1.2rem;
+        padding: 2rem;
+    }
+    .invitation h2{
+        font-size: 4rem;
+    }
+    .invitation  p{
+        margin-top: 1rem;
+    }
+    .contact-details{
+        font-size: 1.3rem;
+        padding-right: 1.2rem;
+    }
+    .contact-links{
+        margin-top: 5rem;
+        width: 100vw;
+    }
+    .invitation{
+        width: 95vw;
+    }
+
+    #projects h2{
+        font-size: 2.8rem;
+    }
+    #work{
+    
+        display: flex;
+        gap: -2rem;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 6rem;
+    }
+    div img{
+        width: 40rem;
+        height: 38rem;
+        object-fit: cover;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .project-tile{
+        height: 25rem;
+        width: 45%;
+        margin-bottom: 2rem;
+    }
+    div img{
+        width: 100%;
+        height: 20rem;
+    }
+    div p{
+        font-size: 1.2rem;
+        margin-top: 1.3rem;
+    }
+    #welcome-section h1{
+        font-size: 4.5rem;
+    }
+    #welcome-section p{
+        font-size: 2rem;
+    }
+    #navbar a{
+        font-size: 1.5rem;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1090px) and (min-width: 826px){
+    .contact-details{
+        font-size: 2.1rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 825px) and (min-width: 604px){
+    .contact-details{
+        font-size: 1.75rem;
+        padding-right: 1.5rem;
+    }
+    .invitation h2{
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 886px) and (min-width: 604px){
+    div img{
+        width: 40rem;
+        height: 60rem;
+    }
+    .project-tile{
+        height: 30rem;
+        width: 45%;
+        margin-bottom: 2rem;
+    }
+      div img{
+        width: 100%;
+        height: 25rem;
+    }
+    div p{
+        font-size: 1.5rem;
+    }
+}
